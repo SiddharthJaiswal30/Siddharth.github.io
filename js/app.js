@@ -573,6 +573,21 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('CV download initiated');
   });
 });
+
+// Example: Adjusting elements based on window size
+window.addEventListener('resize', function() {
+    const width = window.innerWidth;
+    const elements = document.querySelectorAll('.responsive-element');
+    elements.forEach(element => {
+        if (width < 768) {
+            element.style.fontSize = '14px';
+        } else if (width < 1200) {
+            element.style.fontSize = '16px';
+        } else {
+            element.style.fontSize = '18px';
+        }
+    });
+});
 // --------------------------------------------- //
 // Color Switch End
 // --------------------------------------------- //
